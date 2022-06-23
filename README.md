@@ -63,6 +63,3 @@
 
 
 
-
-## Chuck Norris Approval
-![logs](./chuck-norris-approves.gif?raw=true "Title") 
