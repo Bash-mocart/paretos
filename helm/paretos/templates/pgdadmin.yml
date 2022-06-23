@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: {{ .Values.pgadmin.label }}
+spec:
+  replicas: {{ .Values.pgadmin.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.pgadmin.label }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.pgadmin.label }}
+    spec:
+      containers:
+      - name: {{ .Values.pgadmin.container.name }}
+        image: {{ .Values.pgadmin.container.image }}
+        ports:
+        - name: tcp
+          containerPort: {{ .Values.pgadmin.container.port }}
+        env:
+        - name: PGADMIN_DEFAULT_EMAIL
+          value: {{ .Values.pgadmin.container.PGADMIN_DEFAULT_EMAIL | quote }}
+        - name: PGADMIN_DEFAULT_PASSWORD
+          value: {{ .Values.pgadmin.container.PGADMIN_DEFAULT_PASSWORD | quote }}
+        
+       
+      
