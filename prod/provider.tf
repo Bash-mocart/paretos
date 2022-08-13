@@ -8,9 +8,9 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "4.4.0"
-    }
+    } 
   }
-  # using terraform cloud as backend 
+  # using terraform cloud as backend   
   backend "remote" {
     #          The name of your Terraform Cloud organization.
     organization = "paretos"

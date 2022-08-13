@@ -57,12 +57,10 @@
   * in your respective workspaces, create a variable `db_username` and `db_password` give them a value. These are your postgres username and password make sure also to configure `AWS_SECRET_ACCESS_KEY` `AWS_REGION` `AWS_ACCESS_KEY_ID` in the workspace variables
   * To deploy the dev env cd into the dev directory and run `terraform init` and `terraform apply`
   * To deploy the prod env cd into the prod directory and run `terraform init` and `terraform apply`
+  * You must update the kubeconfig using `aws eks update-kubeconfig --name eks` `eks` is the name of the cluster to have access to your cluster
   * To deploy helm, cd into the helm directory and then `helm install paretos paretos`
   * I expose the application using a loadbalancer
   * The default username for the pgadmin app is `bashirsuleiman77@gmail.com`, password is `bashirsuleiman` you can change that by editing the `values.yaml` in `helm/paretos` 
 
 
 
-
-## Chuck Norris Approval
-![logs](./chuck-norris-approves.gif?raw=true "Title") 
